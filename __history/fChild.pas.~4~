@@ -1,0 +1,65 @@
+unit fChild;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TfrmChild = class(TForm)
+    Panel1: TPanel;
+    Button1: TButton;
+    procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure Panel1MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Button1MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+  private
+    { Private êÈåæ }
+  public
+    { Public êÈåæ }
+  end;
+
+var
+  frmChild: TfrmChild;
+  orgX, orgY: integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmChild.Button1MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  with button1 do
+  begin
+    left := X;
+    top := Y;
+  end;
+end;
+
+procedure TfrmChild.Panel1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  //SetCapture(self.Handle);
+  orgX := Panel1.Left;
+  orgY := Panel1.top;
+end;
+
+procedure TfrmChild.Panel1MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  with Panel1 do
+  begin
+    releaseCapture;
+    left := orgX + X;
+    top := orgY + Y;
+    left := X;
+    top := Y;
+    //MessageDlg(IntToStr(x) + ', ' + IntToStr(y), mtInformation, [mbOK], 0);
+  end;
+end;
+
+end.

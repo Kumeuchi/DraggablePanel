@@ -1,0 +1,33 @@
+unit fChildFormShow;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfChildForm = class(TForm)
+  private
+    { Private êÈåæ }
+  protected
+    procedure CreateParams(var Params: TCreateParams);override;
+  public
+    { Public êÈåæ }
+  end;
+
+var
+  fChildForm: TfChildForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfChildForm.CreateParams(var Params: TCreateParams);
+begin
+  inherited CreateParams(Params);
+  //with Params do
+  //  Style := Style or WS_THICKFRAME;
+end;
+
+end.

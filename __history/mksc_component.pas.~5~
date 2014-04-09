@@ -1,0 +1,32 @@
+unit mksc_component;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  Tmksc_form = class(TForm)
+  private
+    { Private éŒ¾ }
+  public
+    { Public éŒ¾ }
+  end;
+
+var
+  mksc_form: Tmksc_form;
+
+procedure Register;
+
+implementation
+
+{$R *.dfm}
+
+procedure Register;
+begin
+  RegisterComponents('mksc components', [Tmksc_form]);
+end;
+
+Initialization
+

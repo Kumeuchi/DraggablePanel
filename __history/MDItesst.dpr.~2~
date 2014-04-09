@@ -1,0 +1,16 @@
+program MDItesst;
+
+uses
+  Vcl.Forms,
+  fMain in 'fMain.pas' {frmMain},
+  fChild in 'fChild.pas' {frmChild};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmChild, frmChild);
+  Application.Run;
+end.

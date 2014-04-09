@@ -1,0 +1,38 @@
+unit fChild;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls;
+
+type
+  TfrmChild = class(TForm)
+    Panel1: TPanel;
+    procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+  private
+    { Private êÈåæ }
+  public
+    { Public êÈåæ }
+  end;
+
+var
+  frmChild: TfrmChild;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmChild.Panel1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  releaseCapture;
+  with Panel1 do
+  begin
+    left := left + X;
+    top := top + Y;
+  end;
+end;
+
+end.

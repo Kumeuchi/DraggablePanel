@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014/04/04 13:50:06.000.124,=rtl.dcp</Transaction>
+    <Transaction>2014/04/04 14:05:10.000.551,=rtl.dcp</Transaction>
+    <Transaction>2014/04/04 14:05:16.000.894,=rtl.dcp</Transaction>
+    <Transaction>2014/04/04 14:06:32.000.874,=C:\Users\Kumeuchi\Documents\RAD Studio\Projects\mksc_component.pas</Transaction>
+    <Transaction>2014/04/04 14:22:17.000.694,C:\Users\Kumeuchi\Documents\RAD Studio\Projects\Package1.dproj=C:\Users\Kumeuchi\Documents\RAD Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2014/04/04 14:22:17.000.840,=rtl.dcp</Transaction>
+    <Transaction>2014/04/04 15:22:10.000.761,=rtl.dcp</Transaction>
+    <Transaction>2014/04/04 15:22:16.000.928,=xmlrtl.dcp</Transaction>
+    <Transaction>2014/04/04 15:22:16.000.926,=vclx.dcp</Transaction>
+    <Transaction>2014/04/04 15:22:16.000.919,=designide.dcp</Transaction>
+    <Transaction>2014/04/04 15:22:16.000.917,=C:\Users\Kumeuchi\Documents\RAD Studio\Projects\mkscCustomFrame.pas</Transaction>
+    <Transaction>2014/04/04 15:22:16.000.921,=vcl.dcp</Transaction>
+    <Transaction>2014/04/04 15:22:16.000.923,=vclactnband.dcp</Transaction>
+    <Transaction>2014/04/04 15:30:21.000.588,=C:\Users\Kumeuchi\Documents\RAD Studio\Projects\ModelSupport_Package1\default.txaPackage</Transaction>
+  </Transactions>
+</BorlandProject>

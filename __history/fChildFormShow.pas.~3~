@@ -1,0 +1,40 @@
+unit fChildFormShow;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfChildForm = class(TForm)
+    procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+  private
+    { Private êÈåæ }
+  protected
+    procedure CreateParams(var Params: TCreateParams);override;
+  public
+    { Public êÈåæ }
+  end;
+
+var
+  fChildForm: TfChildForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfChildForm.CreateParams(var Params: TCreateParams);
+begin
+end;
+
+procedure TfChildForm.FormMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  if ssLeft in Shift then
+    ReleaseCapture;
+    SendMessage(fChildForm.Handle, WM_NCLBUtTONDOWN, HTCAPTION, 0);
+end;
+
+end.
